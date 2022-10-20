@@ -46,7 +46,6 @@ $q->bind($ex->getName(), $routeKey);
 //接收消息并进行处理的回调方法
 function receive($envelope, $queue) {
     echo $envelope->getBody()."\n";
-    $queue->ack($envelope->getDeliveryTag());
 }
 
 //设置队列消费者回调方法，并阻塞
